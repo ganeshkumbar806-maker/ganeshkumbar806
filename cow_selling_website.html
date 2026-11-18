@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Desi Cow Market | Healthy Cows for Sale</title>
+<style>
+:root{--green:#245c3b;--light:#f4f7ef;--gold:#e8b84a;--ink:#243128}
+*{box-sizing:border-box}body{margin:0;font-family:Arial, sans-serif;color:var(--ink);background:#fff;line-height:1.6}
+header{background:var(--green);color:white;padding:16px 7%;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.logo{font-size:1.35rem;font-weight:800}nav a{color:white;text-decoration:none;margin-left:20px;font-weight:600}
+.hero{padding:72px 7%;background:linear-gradient(90deg,rgba(15,45,27,.82),rgba(15,45,27,.25)),url('https://images.unsplash.com/photo-1516467508483-a7212f736d3a?auto=format&fit=crop&w=1800&q=85') center/cover;color:white}
+.hero h1{font-size:clamp(2.2rem,5vw,4rem);line-height:1.1;max-width:650px;margin:0 0 16px}.hero p{font-size:1.15rem;max-width:570px}
+.btn{display:inline-block;background:var(--gold);color:#263326;padding:12px 22px;border-radius:8px;text-decoration:none;font-weight:800;margin-top:12px}
+section{padding:52px 7%}.section-head{text-align:center;margin-bottom:28px}.section-head h2{font-size:2rem;margin:0;color:var(--green)}
+.filters{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin:22px 0}
+input,select{padding:11px 13px;border:1px solid #ccd5ca;border-radius:8px;font:inherit;min-width:190px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(245px,1fr));gap:22px}
+.card{border:1px solid #e1e7de;border-radius:14px;overflow:hidden;background:white;box-shadow:0 5px 18px #17351c12}
+.card img{width:100%;height:190px;object-fit:cover}.card-body{padding:17px}.card h3{margin:0 0 7px;color:var(--green)}
+.price{font-size:1.25rem;font-weight:800;color:#9a6710}.tag{display:inline-block;background:#edf4e9;color:var(--green);padding:4px 9px;border-radius:30px;font-size:.82rem}
+.card a{display:inline-block;margin-top:12px;color:var(--green);font-weight:800}
+.about{background:var(--light);display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:28px;align-items:center}
+.about img{width:100%;border-radius:14px;max-height:330px;object-fit:cover}
+.contact{background:var(--green);color:white;text-align:center}.contact h2{font-size:2rem}.contact .btn{margin:8px}
+footer{padding:20px;text-align:center;background:#173d29;color:#eaf2e8;font-size:.9rem}
+@media(max-width:600px){nav a{margin:0 12px 0 0}.hero{padding:55px 7%}}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo">🐄 Desi Cow Market</div>
+  <nav><a href="#cows">Cows for Sale</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
+</header>
+<main>
+  <section class="hero">
+    <h1>Find a healthy cow for your farm</h1>
+    <p>Explore our cow listings and contact us to ask about availability, breed, age, milk details and price.</p>
+    <a class="btn" href="#cows">View Available Cows</a>
+  </section>
+
+  <section id="cows">
+    <div class="section-head"><h2>Available Cows</h2><p>Sample listings — replace these with your actual animals and details.</p></div>
+    <div class="filters">
+      <input id="search" type="search" placeholder="Search by breed or name..." aria-label="Search cows">
+      <select id="breed" aria-label="Filter by breed"><option value="">All breeds</option><option>Gir</option><option>Hallikar</option><option>Jersey Cross</option><option>HF Cross</option></select>
+    </div>
+    <div class="grid" id="cowGrid">
+      <article class="card" data-breed="Gir">
+        <img src="https://images.unsplash.com/photo-1527153857715-3908f2amid?auto=format&fit=crop&w=900&q=80" alt="Cow in a green field" onerror="this.src='https://images.unsplash.com/photo-1516467508483-a7212f736d3a?auto=format&fit=crop&w=900&q=80'">
+        <div class="card-body"><span class="tag">Gir</span><h3>Gir Cow — Listing 01</h3><p>Age: Add age · Milk: Add litres/day</p><p class="price">₹ Add price</p><a href="#contact">Enquire about this cow →</a></div>
+      </article>
+      <article class="card" data-breed="Hallikar">
+        <img src="https://images.unsplash.com/photo-1546445317-29f4545e9d53?auto=format&fit=crop&w=900&q=80" alt="Cow standing outdoors">
+        <div class="card-body"><span class="tag">Hallikar</span><h3>Hallikar Cow — Listing 02</h3><p>Age: Add age · Details: Add details</p><p class="price">₹ Add price</p><a href="#contact">Enquire about this cow →</a></div>
+      </article>
+      <article class="card" data-breed="Jersey Cross">
+        <img src="https://images.unsplash.com/photo-1500595046743-cd271d694d30?auto=format&fit=crop&w=900&q=80" alt="Cattle grazing on a farm">
+        <div class="card-body"><span class="tag">Jersey Cross</span><h3>Jersey Cross — Listing 03</h3><p>Age: Add age · Milk: Add litres/day</p><p class="price">₹ Add price</p><a href="#contact">Enquire about this cow →</a></div>
+      </article>
+    </div>
+    <p id="empty" style="display:none;text-align:center">No matching cows found.</p>
+  </section>
+
+  <section class="about" id="about">
+    <div><h2>About Our Farm</h2><p>We help farmers and families find cattle that suit their needs. Add your farm story, location, animal-care practices and the breeds you offer here.</p><p><strong>Tip:</strong> Share clear photos and accurate details for each cow, including age, breed, health/vaccination records and current milk yield where applicable.</p></div>
+    <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1000&q=85" alt="Green farm landscape">
+  </section>
+
+  <section class="contact" id="contact">
+    <h2>Interested in a cow?</h2>
+    <p>Contact us for current availability, viewing and more information.</p>
+    <a class="btn" href="tel:+910000000000">Call: +91 XXXXX XXXXX</a>
+    <a class="btn" href="https://wa.me/910000000000?text=Hello%2C%20I%20am%20interested%20in%20your%20cow%20listings." target="_blank" rel="noopener">WhatsApp Enquiry</a>
+    <p>Farm location: Add your village / town, Karnataka</p>
+  </section>
+</main>
+<footer>© 2026 Desi Cow Market · Replace sample content with your farm details.</footer>
+<script>
+const search=document.getElementById('search'), breed=document.getElementById('breed');
+function filterCows(){
+ const q=search.value.toLowerCase(), b=breed.value; let shown=0;
+ document.querySelectorAll('.card').forEach(card=>{
+  const match=(card.innerText.toLowerCase().includes(q)) && (!b || card.dataset.breed===b);
+  card.style.display=match?'':'none'; if(match) shown++;
+ });
+ document.getElementById('empty').style.display=shown?'none':'block';
+}
+search.addEventListener('input',filterCows); breed.addEventListener('change',filterCows);
+</script>
+</body>
+</html>
